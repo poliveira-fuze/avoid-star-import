@@ -10,6 +10,12 @@
   <name>avoid-star-import-plugin-maven-plugin</name>
   <url>https://maven.apache.org</url>
 
+  <!-- define the minimal JDK version -->
+  <properties>
+      <maven.compiler.source>21</maven.compiler.source>
+      <maven.compiler.target>21</maven.compiler.target>
+  </properties>
+
   <dependencies>
     <!-- JavaParser dependency -->
     <dependency>
@@ -84,6 +90,12 @@
         <configuration>
           <encoding>UTF-8</encoding>
         </configuration>
+      </plugin>
+      <!-- Maven Compiler Plugin for setting Java version -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
       </plugin>
       <!-- Maven Surefire Plugin for running JUnit 5 tests -->
       <plugin>
