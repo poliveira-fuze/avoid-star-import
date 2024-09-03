@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.github.poliveira_fuze.AvoidStarImportMojoTest" time="0.63" tests="3" errors="2" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/poliveira/Development/maven-avoid-star-import-plugin/target/test-classes:/Users/poliveira/Development/maven-avoid-star-import-plugin/target/classes:/Users/poliveira/.m2/repository/com/github/javaparser/javaparser-core/3.26.1/javaparser-core-3.26.1.jar:/Users/poliveira/.m2/repository/org/apache/maven/maven-plugin-api/3.9.9/maven-plugin-api-3.9.9.jar:/Users/poliveira/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar:/Users/poliveira/.m2/repository/org/apache/maven/maven-artifact/3.9.9/maven-artifact-3.9.9.jar:/Users/poliveira/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.jar:/Users/poliveira/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-xml/3.0.0/plexus-xml-3.0.0.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.8.0/plexus-classworlds-2.8.0.jar:/Users/poliveira/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.12.0/maven-plugin-annotations-3.12.0.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/Users/poliveira/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/poliveira/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/Users/poliveira/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/Users/poliveira/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/Users/poliveira/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/poliveira/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/poliveira/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/poliveira/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Lisbon"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="PT"/>
+    <property name="sun.boot.library.path" value="/Users/poliveira/.sdkman/candidates/java/21.0.1-tem/lib"/>
+    <property name="sun.java.command" value="/Users/poliveira/Development/maven-avoid-star-import-plugin/target/surefire/surefirebooter-20240903224136306_3.jar /Users/poliveira/Development/maven-avoid-star-import-plugin/target/surefire 2024-09-03T22-41-36_266-jvmRun1 surefire-20240903224136306_1tmp surefire_0-20240903224136306_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/poliveira/Development/maven-avoid-star-import-plugin/target/test-classes:/Users/poliveira/Development/maven-avoid-star-import-plugin/target/classes:/Users/poliveira/.m2/repository/com/github/javaparser/javaparser-core/3.26.1/javaparser-core-3.26.1.jar:/Users/poliveira/.m2/repository/org/apache/maven/maven-plugin-api/3.9.9/maven-plugin-api-3.9.9.jar:/Users/poliveira/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar:/Users/poliveira/.m2/repository/org/apache/maven/maven-artifact/3.9.9/maven-artifact-3.9.9.jar:/Users/poliveira/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M3/org.eclipse.sisu.plexus-0.9.0.M3.jar:/Users/poliveira/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M3/org.eclipse.sisu.inject-0.9.0.M3.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-xml/3.0.0/plexus-xml-3.0.0.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/poliveira/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.8.0/plexus-classworlds-2.8.0.jar:/Users/poliveira/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.12.0/maven-plugin-annotations-3.12.0.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/Users/poliveira/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/poliveira/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/Users/poliveira/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/Users/poliveira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/Users/poliveira/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/Users/poliveira/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/Users/poliveira/.m2/repository/net/bytebuddy/byte-buddy/1.14.12/byte-buddy-1.14.12.jar:/Users/poliveira/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar:/Users/poliveira/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/poliveira"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.home" value="/Users/poliveira/.sdkman/candidates/java/21.0.1-tem"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/poliveira/Development/maven-avoid-star-import-plugin"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/poliveira/Development/maven-avoid-star-import-plugin/target/surefire/surefirebooter-20240903224136306_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.1+12-LTS"/>
+    <property name="user.name" value="poliveira"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="14.3.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.1+12"/>
+    <property name="localRepository" value="/Users/poliveira/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/0f/7wy67jbj6f11g1f_rtxlwn440000gp/T/"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="user.dir" value="/Users/poliveira/Development/maven-avoid-star-import-plugin"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/poliveira/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.1+12-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testPluginLogs" classname="com.github.poliveira_fuze.AvoidStarImportMojoTest" time="0.604">
+    <error type="java.util.ConcurrentModificationException"><![CDATA[java.util.ConcurrentModificationException
+	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1095)
+	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:1049)
+	at com.github.javaparser.ast.NodeList$NodeListIterator.next(NodeList.java:588)
+	at com.github.javaparser.ast.NodeList$NodeListIterator.next(NodeList.java:566)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.expandWildcardImports(AvoidStarImportMojo.java:63)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.lambda$execute$1(AvoidStarImportMojo.java:37)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.execute(AvoidStarImportMojo.java:35)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.execute(AvoidStarImportMojo.java:33)
+	at com.github.poliveira_fuze.AvoidStarImportMojoTest.testPluginLogs(AvoidStarImportMojoTest.java:94)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/poliveira/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.12/byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="testExpandWildcardImports" classname="com.github.poliveira_fuze.AvoidStarImportMojoTest" time="0.003">
+    <error type="java.util.ConcurrentModificationException"><![CDATA[java.util.ConcurrentModificationException
+	at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1095)
+	at java.base/java.util.ArrayList$Itr.next(ArrayList.java:1049)
+	at com.github.javaparser.ast.NodeList$NodeListIterator.next(NodeList.java:588)
+	at com.github.javaparser.ast.NodeList$NodeListIterator.next(NodeList.java:566)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.expandWildcardImports(AvoidStarImportMojo.java:63)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.lambda$execute$1(AvoidStarImportMojo.java:37)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at com.github.poliveira_fuze.AvoidStarImportMojo.execute(AvoidStarImportMojo.java:35)
+	at com.github.poliveira_fuze.AvoidStarImportMojoTest.testExpandWildcardImports(AvoidStarImportMojoTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
+  </testcase>
+  <testcase name="testNoWildcardImports" classname="com.github.poliveira_fuze.AvoidStarImportMojoTest" time="0.011">
+    <system-out><![CDATA[[info] Expanded wildcard imports in /var/folders/0f/7wy67jbj6f11g1f_rtxlwn440000gp/T/avoid-start-import-test10339918882683031949/TestFileNoWildcard.java
+]]></system-out>
+  </testcase>
+</testsuite>
