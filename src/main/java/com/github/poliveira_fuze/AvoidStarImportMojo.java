@@ -64,16 +64,12 @@ public class AvoidStarImportMojo extends AbstractMojo {
       if (imp.isAsterisk()) {
         String packageName = imp.getNameAsString();
 
-        if ("java.util".equals(packageName)) {
-          imports.remove(imp);
-
-          for (String className : usedTypes) {
-            try {
-              Class<?> clazz = Class.forName(packageName + "." + className);
-              compilationUnit.addImport(clazz);
-            } catch (ClassNotFoundException e) {
-              // Class not found in the specified package
-            }
+        for (String className : usedTypes) {
+          try {
+            Class<?> clazz = Class.forName(packageName + "." + className);
+            compilationUnit.addImport(clazz);
+          } catch (ClassNotFoundException e) {
+            getLog().warn("Class not found: " + packageName + "." + className);
           }
         }
       }
