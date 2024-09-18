@@ -2,13 +2,35 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.poliveira-fuze</groupId>
+  <groupId>io.github.poliveira-fuze</groupId>
   <artifactId>avoid-star-import-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <version>1.0.0</version>
 
   <name>avoid-star-import-plugin-maven-plugin</name>
   <url>https://maven.apache.org</url>
+  <description>Allows to format and enforce an no star imports project</description>
+
+  <scm>
+    <url>git@github.com:poliveira-fuze/avoid-star-import-maven-plugin.git</url>
+    <connection>scm:git:git@github.com:poliveira-fuze/avoid-star-import-maven-plugin.git</connection>
+  </scm>
+
+  <!-- add developer information -->
+  <developers>
+    <developer>
+      <id>poliveira-fuze</id>
+      <name>Paulo Oliveira</name>
+      <email/>
+    </developer>
+    </developers>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
 
   <!-- define the minimal JDK version -->
   <properties>
@@ -94,7 +116,7 @@
       </testResource>
     </testResources>
 
-    <plugins>
+      <plugins>
       <!-- Maven Resources Plugin for setting encoding -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -110,12 +132,52 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.13.0</version>
       </plugin>
+      <!-- Sign Maven Plugin for signing JAR files -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <gpgArguments>
+            <arg>--pinentry-mode</arg>
+            <arg>loopback</arg>
+          </gpgArguments>
+        </configuration>
+      </plugin>
+      <!-- Maven JAR plugin for creating JAR files -->
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.4.2</version>
+      </plugin>
       <!-- Maven Surefire Plugin for running JUnit 5 tests -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.0</version>
       </plugin>
+
+      <!-- Maven JAR Publishing -->
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId>
+          <version>0.5.0</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+            <checksums>required</checksums>
+            <waitUntil>published</waitUntil>
+          </configuration>
+        </plugin>
     </plugins>
   </build>
 
